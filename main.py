@@ -1,31 +1,26 @@
 #### 1
-print("Введите число: ", end='')
-a = input()
+a = input("Введите число: ")
 b = 1000
-print("Введите строку: ", end='')
-c = input()
+c = input("Введите строку: ")
 print(a, b, c)
 
 #### 2
 
-print('Введите вермя в скундах: ', end='')
-s = int(input())
+s = int(input('Введите вермя в скундах: '))
 m = s // 60
 s -= m * 60
 h = m // 60
 m -= h*60
-print(h, m, s, sep=':')
+print(h if h > 10 else '0' + str(h), m if m > 10 else '0' + str(m), s if s > 10 else '0' + str(s), sep=':')
 
 #### 3
 
-print('Введите число: ', end='')
-n = input()
+n = input('Введите число: ')
 print(int(n) + int(n+n) + int(n + n + n))
 
 #### 4
 
-print('Введите число: ', end='')
-n = input()
+n = input('Введите число: ')
 mx = -1
 ct = 0
 while ct < len(n):
@@ -36,10 +31,8 @@ print(mx)
 
 #### 5
 
-print('Введите выручку: ', end='')
-p = int(input())
-print('Введите издержки: ', end='')
-n = int(input())
+p = int(input('Введите выручку: '))
+n = int(input('Введите издержки: '))
 tr = 0
 if p > n:
     tr = 1
@@ -50,10 +43,10 @@ else:
 #### 6
 
 if tr == 1:
-    print('Рентабельность', (p - n) / p)
-    print('Введите колличество сотрудников: ', end='')
-    wor = int(input())
-    print('Прибыль на сотрудника: ', (p - n) / wor)
+    ern = p - n
+    print('Рентабельность', ern / p)
+    wor = int(input('Введите колличество сотрудников: '))
+    print('Прибыль на сотрудника: ', ern / wor)
 
 #### 7
 
